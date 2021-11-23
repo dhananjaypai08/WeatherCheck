@@ -13,6 +13,7 @@ These instructions will get you a copy of the project up and running on your loc
 * Python --version 3.9.2(tested on)
 * Flask --version 2.0.2(tested on)
 * SQLAlchemy
+
 To check your version use below command in the command line
 ```
 flask --version
