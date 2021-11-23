@@ -49,6 +49,10 @@ Just type in the below command in the command line
 ```
 python main.py
 ```
+  or 
+```
+flask run
+```
 Note: Make sure you are in the WeatherCheck directory in the command line while entering the above command
 
 You will be then provided with a localhost website link for your local build and clicking on that link will redirect you to the web app.
