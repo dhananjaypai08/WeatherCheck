@@ -41,3 +41,14 @@ Install all the necessary packages
 pip install -r requirements.txt
 ```
 
+### Documentation
+Very simple to use . You just have to type in the city name of which you want to get the weather information about and click add city.
+
+### How to Run
+Just type in the below command in the command line
+```
+python main.py
+```
+Note: Make sure you are in the WeatherCheck directory in the command line while entering the above command
+
+You will be then provided with a localhost website link for your local build and clicking on that link will redirect you to the web app.
