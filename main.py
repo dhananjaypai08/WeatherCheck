@@ -26,7 +26,7 @@ def main():
     cities = Weather.query.all()
     all_city_data = []
     for city in cities:
-        url = f"http://api.openweathermap.org/data/2.5/weather?q={city.city}&units=metric&appid=16f1ae461349d7fd01609f794ed8c775"
+        url = f"http://api.openweathermap.org/data/2.5/weather?q={city.city}&units=metric&appid=[your_API_key]" # Get API key on openweathermaporg
         response = requests.get(url)
         text = response.json()
         city_data = {
