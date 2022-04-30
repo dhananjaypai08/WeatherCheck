@@ -26,15 +26,27 @@ def main():
     cities = Weather.query.all()
     all_city_data = []
     for city in cities:
-        url = f"http://api.openweathermap.org/data/2.5/weather?q={city.city}&units=metric&appid=[your_API_key]" # Get API key on openweathermaporg
+        url = f"http://api.openweathermap.org/data/2.5/weather?q={city.city}&units=metric&appid=16f1ae461349d7fd01609f794ed8c775" # Get API key on openweathermaporg
         response = requests.get(url)
         text = response.json()
-        city_data = {
-            'city':text['name'],
-            'description':text['weather'][0]['description'],
-            'temperature':text['main']['temp'],
-            'icon':text['weather'][0]['icon']
-        }
+        print(text)
+        try:
+            city_data = {
+                'city':text['name'],
+                'description':text['weather'][0]['description'],
+                'temperature':text['main']['temp'],
+                'country': text['sys']['country'],
+                'icon':text['weather'][0]['icon']
+            }
+        except:
+            city_data = {
+                'city': "The city is not available on the API, Make sure you have entered the correct city name",
+                'description': "city not available",
+                'temperature': "NA",
+                'country': "NA",
+                'icon': ""
+                
+            }
         all_city_data.append(city_data)
             
     print(all_city_data)
@@ -42,4 +54,4 @@ def main():
 
 
 if __name__=="__main__":
-    app.run(debug=False)
+    app.run(debug=True)

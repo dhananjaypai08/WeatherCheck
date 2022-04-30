@@ -57,11 +57,17 @@
     <h6>City Number {{loop.index}}</h6>
     <div class="media-left">
       <figure class="image is-50x50">
-          <img src="http://openweathermap.org/img/w/{{ city_data.icon }}.png" alt="Image">
+          <img src="http://openweathermap.org/img/w/{{ city_data.icon }}.png" alt="Image cannot be found">
       </figure>
       <div class="container">
         <h5 class="card-title">{{city_data.city}}</h5>
         <p class="card-text">{{city_data.description}} with a temperature of {{city_data.temperature}} degree Celsius.</p>
+        
+      </div>
+      <br>
+      <div class="container">
+        <h6 class="card-title">Country-Code</h6>
+        <p class="card-text">{{city_data.country}}</p>
         
       </div>
     </div>
